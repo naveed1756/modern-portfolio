@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naveed Arshad - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+
+<body>
+    <!-- Canvas for 3D Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-left">
+            <div class="nav-logo magnetic-btn">
+                <a href="#hello" class="logo-text">
+                    <span class="logo-n">N</span><span class="logo-dot">.</span><span class="logo-a">A</span>
+                </a>
+            </div>
+        </div>
+        <div class="hamburger" aria-label="Open Menu">
+            <span class="line top"></span>
+            <span class="line middle"></span>
+            <span class="line bottom"></span>
+        </div>
+        <div class="nav-links">
+            <a href="#hello" class="magnetic-btn">Hello<span class="underline"></span></a>
+            <a href="#about" class="magnetic-btn">About<span class="underline"></span></a>
+            <a href="#highlights" class="magnetic-btn">Highlights<span class="underline"></span></a>
+            <a href="#projects" class="magnetic-btn">Projects<span class="underline"></span></a>
+            <a href="#skills" class="magnetic-btn">Skills<span class="underline"></span></a>
+            <a href="#connect" class="magnetic-btn">Connect<span class="underline"></span></a>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <a href="#hello" class="stagger-link">Hello</a>
+            <a href="#about" class="stagger-link">About</a>
+            <a href="#highlights" class="stagger-link">Highlights</a>
+            <a href="#projects" class="stagger-link">Projects</a>
+            <a href="#skills" class="stagger-link">Skills</a>
+            <a href="#connect" class="stagger-link">Connect</a>
+        </div>
+    </div>
+
+    <main id="smooth-wrapper">
+        <div id="smooth-content">
+
+            <!-- HERO -->
+            <section class="hero" id="hello">
+                <div class="hero-inner">
+                    <div class="hero-text">
+                        <p class="hi reveal-text">Hi,</p>
+                        <h1 class="name reveal-text">I'm Naveed Arshad</h1>
+                        <div class="cycle-wrapper reveal-text">
+                            <span class="cycle-text active">2nd Year EIE student @ MIT, Anna University</span>
+                            <span class="cycle-text">Exploring complex and evolving behavior</span>
+                            <span class="cycle-text">Simulating Digital systems & computing</span>
+                        </div>
+                    </div>
+                    <div class="hero-photo-container">
+                        <div class="hero-photo magnetic-img">
+                            <!-- Replaced with a stylized 3D placeholder or stylized graphic if real photo missing, but using real photo given -->
+                            <img src="assets/formal-pic.jpeg" alt="Naveed Arshad"
+                                onerror="this.src='https://images.unsplash.com/photo-1549692520-acc6669e2f0c?q=80&w=800&auto=format&fit=crop'">
+                            <div class="photo-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </section>
+
+            <!-- ABOUT -->
+            <section class="about section-padding" id="about">
+                <h2 class="section-header" data-text="About Me">About Me</h2>
+                <div class="about-container glass-panel">
+
+                    <div class="about-track">
+                        <div class="pane switch-container" id="about-switch-container">
+                            <div class="switch active magnetic-btn" data-target="snapshot">
+                                <i data-lucide="user"></i>
+                            </div>
+                            <div class="switch magnetic-btn" data-target="direction">
+                                <i data-lucide="compass"></i>
+                            </div>
+                            <div class="switch magnetic-btn" data-target="presence">
+                                <i data-lucide="link"></i>
+                            </div>
+                        </div>
+
+                        <div class="pane content">
+                            <div class="content-para active" id="snapshot">
+                                <p>Hi, I'm Naveed Arshad, a second year Electronics & Instrumentation Engineering
+                                    student with a strong interest in understanding systems from first principles. I'm
+                                    deeply curious about how things work at a fundamental level, and I prefer breaking
+                                    concepts down to their core mechanics before building them back up into complete
+                                    systems.</p>
+                                <p>I work on building and simulating systems that range from digital hardware concepts
+                                    to computational models that demonstrate how complex behavior can emerge from simple
+                                    underlying rules. Whether it's exploring logic at the hardware level or modeling
+                                    interactions in a simulated environment, I focus on understanding the structure,
+                                    constraints, and dynamics that drive system behavior.</p>
+                                <p>Most of my learning happens through hands-on experimentation. I write simulations,
+                                    construct models, and test ideas practically rather than relying only on theory. For
+                                    me, building is a way of thinking, it helps me uncover how systems function beneath
+                                    the surface and how small rule sets can scale into intricate, large-scale behavior.
+                                </p>
+                            </div>
+
+                            <div class="content-para" id="direction">
+                                <p>At present, I'm focused on strengthening my understanding of integrated circuit
+                                    design across both analog and digital domains, with an emphasis on core principles
+                                    and underlying design concepts. I try to understand the reasoning behind design
+                                    decisions, the trade-offs involved, and the constraints that shape circuit behavior,
+                                    rather than approaching it only from a tools or application perspective.</p>
+                                <p>Alongside this, I'm actively learning and implementing machine learning techniques
+                                    through personal, experiment-driven projects. My aim is to understand how learning
+                                    algorithms actually work , how models update, how optimization functions, and how
+                                    patterns are formed, instead of just using existing frameworks. I prefer building
+                                    small implementations to observe how changes in structure or parameters affect
+                                    results.</p>
+                                <p>At the same time, I'm developing my front-end web development skills as a separate
+                                    domain, focusing on clean, responsive, and well-structured interfaces that clearly
+                                    present systems and simulations.</p>
+                            </div>
+
+                            <div class="content-para" id="presence">
+                                <p>Beyond academics, I actively document my learning journey and share insights online.
+                                    I regularly post on LinkedIn about my projects, experiences, and the lessons I learn
+                                    along the way. In parallel, I work on a variety of projects, which are available on
+                                    my GitHub. This practice helps me deepen my understanding while also connecting with
+                                    a wider community of learners and professionals.</p>
+                                <div class="connect-links-container" id="pr-link-container">
+                                    <a class="connect-link magnetic-btn" id="pr-linkedIn"
+                                        href="https://www.linkedin.com/in/naveed-arshad-15bb16322/" target="_blank">
+                                        <i data-lucide="linkedin"></i>
+                                    </a>
+                                    <a class="connect-link magnetic-btn" id="pr-github"
+                                        href="https://github.com/naveed1756" target="_blank">
+                                        <i data-lucide="github"></i>
+                                    </a>
+                                    <a class="connect-link magnetic-btn" id="pr-resume" href="./assets/resume.pdf"
+                                        target="_blank" rel="noopener">
+                                        <i data-lucide="file-text"></i>
+                                    </a>
+                                </div>
+                                <p>Feel free to explore my work and connect with me on LinkedIn and GitHub to follow my
+                                    journey and exchange ideas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- HIGHLIGHTS -->
+            <section class="highlights section-padding" id="highlights">
+                <h2 class="section-header" data-text="Highlights">Highlights</h2>
+                <div class="highlights-track glass-panel construction-panel" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 250px;">
+                    <div class="construction-container">
+                        <div class="iso-grid">
+                            <div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div>
+                            <div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div>
+                            <div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div>
+                            <div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div>
+                            <div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div><div class="iso-cell"></div>
+                        </div>
+                        <p class="construction-text">
+                            This section is under construction. <br> More immersive experiences coming soon.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS -->
+            <section class="projects section-padding" id="projects">
+                <h2 class="section-header" data-text="Projects">Projects</h2>
+                <div class="projects-grid">
+
+                    <div class="project-card tilt-card" id="evolsim">
+                        <div class="card-front">
+                            <div class="card-bg" style="background-image: url('/assets/evolsim.png');"></div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3 class="project-title">EvolSim</h3>
+                                <div class="badge-container">
+                                    <span class="badge">JavaScript</span>
+                                    <span class="badge">Simulation</span>
+                                    <span class="badge">Web</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p class="project-desc">
+                                A browser-based simulation of organisms evolving in a 2D world through simple movement,
+                                survival, and reproduction rules.
+                            </p>
+                            <div class="link-container">
+                                <a href="https://github.com/naveed1756/evolsim" class="project-btn magnetic-btn"
+                                    target="_blank"><i data-lucide="external-link"></i> View Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card tilt-card" id="img-blur">
+                        <div class="card-front">
+                            <div class="card-bg" style="background-image: url('/assets/image-blur.png');"></div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3 class="project-title">Image Blur Tool</h3>
+                                <div class="badge-container">
+                                    <span class="badge">JavaScript</span>
+                                    <span class="badge">Web</span>
+                                    <span class="badge">Image Processing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p class="project-desc">
+                                An Image Blurring Tool built as a small project to explore convolutions, image
+                                processing techniques.
+                            </p>
+                            <div class="link-container">
+                                <a href="https://github.com/naveed1756/image-blur" class="project-btn magnetic-btn"
+                                    target="_blank"><i data-lucide="external-link"></i> View Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card tilt-card" id="the-snake">
+                        <div class="card-front">
+                            <div class="card-bg"></div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3 class="project-title">The Snake</h3>
+                                <div class="badge-container">
+                                    <span class="badge">Python</span>
+                                    <span class="badge">Game</span>
+                                    <span class="badge">Pygame</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p class="project-desc">
+                                A classic Snake multiplayer-in-single-device game implemented in Python using Pygame.
+                            </p>
+                            <div class="link-container">
+                                <a href="https://github.com/naveed1756/the-snake" class="project-btn magnetic-btn"
+                                    target="_blank"><i data-lucide="external-link"></i> View Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card tilt-card" id="depthra">
+                        <div class="card-front">
+                            <div class="card-bg" style="background-image: url('/assets/depthra.png');"></div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3 class="project-title">Depthra</h3>
+                                <div class="badge-container">
+                                    <span class="badge">Javascript</span>
+                                    <span class="badge">NodeJS</span>
+                                    <span class="badge">Web</span>
+                                    <span class="badge">ML</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p class="project-desc">A groundwater monitoring and analysing application that uses AI and
+                                data processing models.</p>
+                            <div class="link-container">
+                                <a href="https://github.com/depthra-devs/depthra" class="project-btn magnetic-btn"
+                                    target="_blank"><i data-lucide="external-link"></i> View Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card tilt-card" id="portfolio">
+                        <div class="card-front">
+                            <div class="card-bg" style="background-image: url('/assets/portfolio.png');"></div>
+                            <div class="card-overlay"></div>
+                            <div class="card-content">
+                                <h3 class="project-title">Personal Website</h3>
+                                <div class="badge-container">
+                                    <span class="badge">HTML</span>
+                                    <span class="badge">CSS</span>
+                                    <span class="badge">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <p class="project-desc">This personal portfolio website built with a focus on clean design,
+                                responsiveness, and smooth animations.</p>
+                            <div class="link-container">
+                                <a href="https://github.com/naveed1756/portfolio-site" class="project-btn magnetic-btn"
+                                    target="_blank"><i data-lucide="external-link"></i> View Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- SKILLS -->
+            <section class="skills section-padding" id="skills">
+                <h2 class="section-header" data-text="Expertise">Expertise</h2>
+                <div class="skills-grid">
+
+                    <div class="skill-card glass-panel">
+                        <h3 class="skill-title">Languages</h3>
+                        <div class="skill-badges">
+                            <span class="skill-item"><i class="devicon-python-plain colored"></i> Python</span>
+                            <span class="skill-item"><i class="devicon-c-plain colored"></i> C / C++</span>
+                            <span class="skill-item"><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                            <span class="skill-item"><i class="devicon-java-plain colored"></i> Java</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-panel">
+                        <h3 class="skill-title">Core Concepts</h3>
+                        <div class="skill-badges">
+                            <span class="skill-item"><i data-lucide="binary"></i> Digital Logic</span>
+                            <span class="skill-item"><i data-lucide="cpu"></i> Analog IC</span>
+                            <span class="skill-item"><i class="devicon-tensorflow-original colored"></i> ML / AI</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-panel">
+                        <h3 class="skill-title">Tools</h3>
+                        <div class="skill-badges">
+                            <span class="skill-item"><i class="devicon-git-plain colored"></i> Git</span>
+                            <span class="skill-item"><i class="devicon-matlab-plain colored"></i> MATLAB</span>
+                            <span class="skill-item"><i class="devicon-docker-plain colored"></i> Docker</span>
+                            <span class="skill-item"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                            <span class="skill-item"><i data-lucide="microchip"></i> Proteus</span>
+                            <span class="skill-item"><i data-lucide="terminal"></i> LabVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-card glass-panel">
+                        <h3 class="skill-title">Web</h3>
+                        <div class="skill-badges">
+                            <span class="skill-item"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                            <span class="skill-item"><i class="devicon-css3-plain colored"></i> CSS3</span>
+                            <span class="skill-item"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- CONNECT -->
+            <section class="connect section-padding" id="connect">
+                <h2 class="section-header" data-text="Let's Connect">Let's Connect</h2>
+                <div class="connect-row">
+                    <a href="mailto:nav.shad1756@gmail.com" class="connect-item magnetic-btn glass-panel"
+                        id="connect-mail">
+                        <i data-lucide="mail" class="connect-icon"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://github.com/naveed1756" target="_blank"
+                        class="connect-item magnetic-btn glass-panel" id="connect-gh">
+                        <i data-lucide="github" class="connect-icon"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/naveed-arshad-15bb16322/" target="_blank"
+                        class="connect-item magnetic-btn glass-panel" id="connect-li">
+                        <i data-lucide="linkedin" class="connect-icon"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+                <p class="connect-footer">
+                    Designed & Built by Naveed · 2026<br>
+                    <span class="tech-stack-footer">Vite · Three.js · GSAP</span>
+                </p>
+            </section>
+
+        </div>
+        </div>
+
+        <script type="module" src="/main.js"></script>
+</body>
+
+</html>
