@@ -37,4 +37,3 @@ pnpm-debug.log*
 
 # Other
 .gemini
-package-lock.json
